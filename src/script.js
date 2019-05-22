@@ -6,7 +6,7 @@ var users = {
     get_all_data : function(func){
         
         // Alias
-        var alias = ["active-users", "users", "user-groups"];
+        var alias = ["active-user.list", "user.list", "user-group.list"];
 
         // Get
         airscarp.plugin.shell.get(alias, function(x){
@@ -25,7 +25,7 @@ var users = {
     
     show_active_users_table : function(){
         
-        var data  = users.data["active_users"];
+        var data  = users.data["active-user.list"];
         var tbody = [];
         
         for(var i = 0; i < data.length; i++){
@@ -51,7 +51,7 @@ var users = {
     
     show_users_table : function(){
         
-        var data  = users.data["users"];
+        var data  = users.data["user.list"];
         var tbody = [];
         
         for(var i = 0; i < data.length; i++){
@@ -73,7 +73,7 @@ var users = {
     
     show_user_groups_table : function(){
         
-        var data  = users.data["user_groups"];
+        var data  = users.data["user-group.list"];
         var tbody = [];
         
         for(var i in data){
