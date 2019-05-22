@@ -1,0 +1,94 @@
+<div class="active-users">
+    <header class="sec desc">
+        <span class="content">
+            <span>Active Users</span>
+            <a href="#" data-api-modal="users"></a>
+        </span>
+    </header>
+    <div class="card card-red">
+        <div class="table-responsive">
+            <table class="table table-hover" id="active-users-table">
+                <thead>
+                    <tr>
+                        <th class="header">User</th>
+                        <th class="header">TTY</th>
+                        <th class="header">From</th>
+                        <th class="header">Login</th>
+                        <th class="header">IDLE</th>
+                        <th class="header">JCPU</th>
+                        <th class="header">PCPU</th>
+                        <th class="header">What</th>
+                        <th class="header"></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-9">
+        <div class="users-list">
+            <header class="sec desc mt-4">
+                <span class="content">
+                    <span>Users</span>
+                    <a href="#" data-refresh="users"></a>
+                    <a href="#" data-api-modal="users"></a>
+                </span>
+            </header>
+            <div class="card card-orange">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="users-table">
+                        <thead>
+                            <tr>
+                                <th class="header">ID</th>
+                                <th class="header">User / Info</th>
+                                <th class="header">Group</th>
+                                <th class="header">Home</th>
+                                <th class="header">Shell</th>
+                                <th class="header"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <header class="sec desc mt-4">
+            <span class="content">
+                <span>User Groups</span>
+                <a href="#" data-refresh="users"></a>
+                <a href="#" data-api-modal="users"></a>
+            </span>
+        </header>
+        <div class="card card-blue">
+            <div class="table-responsive">
+                <table class="table table-hover" id="user-groups-table">
+                    <thead>
+                        <tr>
+                            <th class="header">ID</th>
+                            <th class="header">Group</th>
+                            <th class="header"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    airscarp.ready(function(){
+        
+        users.get_all_data(function(){
+            
+            users.show_active_users_table();
+            users.show_users_table();
+            users.show_user_groups_table();
+        });
+    });
+</script>

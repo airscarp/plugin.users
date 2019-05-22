@@ -1,0 +1,13 @@
+{
+    "version"     : "1.0.0",
+    "name"        : "Users",
+    "menu"        : "Users",
+    "alias"       : "users",
+    "os"          : ["ubuntu", "centos", "rhel", "debian", "cloudlinux", "fedora"],
+    "permissions" : [
+        "user.list",
+        "user-group.list",
+        "active-user.list",
+        "active-user.kick"
+    ]
+}
